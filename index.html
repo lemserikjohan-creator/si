@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuwe Ruimte | Social Innovation & Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Geologica', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        museum: {
+                            bg: '#f8f8f8',
+                            dark: '#0a0a0a',
+                            gray: '#888888',
+                            border: '#e0e0e0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Minimalist Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 150ms; }
+        .delay-200 { transition-delay: 300ms; }
+
+        /* Artful Image Treatment */
+        .museum-img-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .museum-img-container img {
+            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), filter 1s ease;
+            filter: grayscale(100%);
+        }
+        .museum-img-container:hover img {
+            transform: scale(1.03);
+            filter: grayscale(0%);
+        }
+        
+        /* Stark Nav */
+        .museum-nav {
+            background: rgba(248, 248, 248, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid #0a0a0a;
+        }
+
+        /* Typography tweaks */
+        .tracking-tighter-xl {
+            letter-spacing: -0.04em;
+        }
+        .green{
+           color:rgb(14, 168, 61);
+           
+    
+        }
+    </style>
+</head>
+<body class="bg-museum-bg text-museum-dark font-sans antialiased overflow-x-hidden selection:bg-museum-dark selection:text-white">
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-5 museum-nav">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-sans font-semibold tracking-tighter uppercase text-museum-dark">
+                Nieuwe Ruimte
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-10 items-center font-sans text-xs uppercase tracking-widest font-medium text-museum-dark">
+                <a href="#approach" class="hover:text-museum-gray transition-colors">Approach</a>
+                <a href="#work" class="hover:text-museum-gray transition-colors">Exhibitions / Work</a>
+                <a href="#about" class="hover:text-museum-gray transition-colors">About</a>
+                <a href="#contact" class="border border-museum-dark text-museum-dark px-6 py-3 hover:bg-museum-dark hover:text-white transition-colors">Partner With Us</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-museum-dark text-2xl focus:outline-none">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-museum-bg border-b border-museum-dark py-6 px-6 flex flex-col gap-6 shadow-2xl md:hidden">
+            <a href="#approach" class="text-museum-dark text-sm uppercase tracking-widest font-medium hover:text-museum-gray block">Approach</a>
+            <a href="#work" class="text-museum-dark text-sm uppercase tracking-widest font-medium hover:text-museum-gray block">Exhibitions / Work</a>
+            <a href="#about" class="text-museum-dark text-sm uppercase tracking-widest font-medium hover:text-museum-gray block">About</a>
+            <a href="#contact" class="border border-museum-dark text-museum-dark px-6 py-3 text-center text-sm uppercase tracking-widest font-medium hover:bg-museum-dark hover:text-white transition-colors block mt-4">Partner With Us</a>
+        </div>
+    </header>
+
+    <section class="relative pt-40 pb-20 md:pt-56 md:pb-32 px-6 md:px-12 max-w-screen-2xl mx-auto min-h-[95vh] flex flex-col justify-between">
+        <div class="reveal">
+            <p class="text-xs md:text-sm uppercase tracking-widest font-medium mb-8 text-museum-gray">01 &mdash; Design for Social Change</p>
+            <h1 class="text-6xl md:text-8xl lg:text-[9rem] font-sans font-bold tracking-tighter-xl uppercase leading-[0.85] text-museum-dark mb-12">
+                Systemisch<br>
+                <span class="text-museum-gray" >Flexibel</span><br>
+                 Sociaal.
+               
+            </h1>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row justify-between items-end gap-12 mt-12 reveal delay-100">
+            <div class="lg:w-1/3">
+                <p class="text-lg md:text-xl text-museum-dark font-light leading-relaxed">
+                    We blend rigorous human-centered design with sustainable innovation to dissect complex societal challenges and architect a more equitable future.
+                </p>
+            </div>
+            
+            <div class="lg:w-1/2 w-full museum-img-container aspect-[16/9] lg:aspect-[21/9] bg-museum-border">
+                <img src="mitchel-lensink-mHo_LRjAbD4-unsplash.jpg" alt="Community joining hands" class="object-cover w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Museum Quote Style -->
+    <section class="border-y border-museum-dark bg-[#0033FF] text-white py-32 px-6 md:px-12">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 reveal">
+            <div class="lg:col-span-3">
+                <p class="text-xs uppercase tracking-widest font-medium text-white/80">Curatorial Statement</p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-serif italic leading-tight mb-12">
+                    "True innovation doesn't just disrupt markets; it uplifts communities, restores ecosystems, and empowers the marginalized."
+                </h2>
+                <div class="flex items-center gap-6">
+                    <div class="w-12 h-[1px] bg-white"></div>
+                    <p class="text-sm uppercase tracking-widest font-medium">Our Core Philosophy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-32 px-6 md:px-12 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 reveal">
+            <div class="lg:col-span-4">
+                <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-tighter uppercase">Approach</h2>
+            </div>
+            <div class="lg:col-span-8">
+                <p class="text-2xl md:text-3xl font-light text-museum-gray leading-snug">
+                    We utilize a multidisciplinary framework to tackle systemic issues, ensuring our structural solutions are viable, deeply human, and enduring.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-museum-dark">
+            <!-- Service 1 -->
+            <div class="border-b md:border-b-0 md:border-r border-museum-dark p-8 md:p-12 reveal">
+                <span class="text-sm uppercase tracking-widest font-medium text-museum-gray block mb-12">01</span>
+                <h3 class="text-3xl font-sans font-bold tracking-tighter uppercase mb-6">Human-Centered<br>Design</h3>
+                <p class="text-museum-dark font-light leading-relaxed text-lg">
+                    We begin with radical empathy. By intimately understanding the demographic canvas, we construct solutions that align flawlessly with their lived realities.
+                </p>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="border-b md:border-b-0 md:border-r border-museum-dark p-8 md:p-12 reveal delay-100">
+                <span class="text-sm uppercase tracking-widest font-medium text-museum-gray block mb-12">02</span>
+                <h3 class="text-3xl font-sans font-bold tracking-tighter uppercase mb-6">Circular<br>Ecosystems</h3>
+                <p class="text-museum-dark font-light leading-relaxed text-lg">
+                    Rejecting linear consumption. We engineer systems that actively regenerate resources, conceptualizing waste as a design flaw to be eliminated.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-8 md:p-12 reveal delay-200">
+                <span class="text-sm uppercase tracking-widest font-medium text-museum-gray block mb-12">03</span>
+                <h3 class="text-3xl font-sans font-bold tracking-tighter uppercase mb-6">Digital<br>Architecture</h3>
+                <p class="text-museum-dark font-light leading-relaxed text-lg">
+                    Deploying emerging technologies and strict data frameworks as tools for equity, scaling social impact through accessible, structural platforms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Gallery Style Work Section -->
+    <section id="work" class="bg-white border-y border-museum-dark py-32 px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-tighter uppercase">Selected Works</h2>
+                <a href="#" class="mt-6 md:mt-0 text-sm uppercase tracking-widest font-medium border-b border-museum-dark pb-1 hover:text-museum-gray hover:border-museum-gray transition-colors">
+                    View Complete Archive
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer reveal">
+                    <div class="museum-img-container aspect-[4/5] mb-8 bg-museum-border">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Urban farming initiative" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-sans font-bold tracking-tighter uppercase mb-2 group-hover:text-museum-gray transition-colors">AgriConnect Hubs</h3>
+                            <p class="text-museum-dark font-light">Redesigning localized food supply chains.</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs uppercase tracking-widest font-medium text-museum-gray mb-1">Year</p>
+                            <p class="text-sm font-medium">2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group cursor-pointer reveal delay-100 md:mt-32">
+                    <div class="museum-img-container aspect-[4/5] mb-8 bg-museum-border">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Digital education" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-sans font-bold tracking-tighter uppercase mb-2 group-hover:text-museum-gray transition-colors">Lumina Platform</h3>
+                            <p class="text-museum-dark font-light">Offline-first educational interfaces.</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs uppercase tracking-widest font-medium text-museum-gray mb-1">Year</p>
+                            <p class="text-sm font-medium">2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Stats -->
+    <section class="py-32 bg-museum-bg text-museum-dark border-b border-museum-dark">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10 grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8 reveal">
+            <div class="border-l-2 border-museum-dark pl-6">
+                <p class="text-5xl md:text-7xl font-sans font-bold tracking-tighter mb-4">45+</p>
+                <p class="text-xs uppercase tracking-widest font-medium text-museum-gray">Global Partners</p>
+            </div>
+            <div class="border-l-2 border-museum-dark pl-6">
+                <p class="text-5xl md:text-7xl font-sans font-bold tracking-tighter mb-4">120</p>
+                <p class="text-xs uppercase tracking-widest font-medium text-museum-gray">Projects Delivered</p>
+            </div>
+            <div class="border-l-2 border-museum-dark pl-6">
+                <p class="text-5xl md:text-7xl font-sans font-bold tracking-tighter mb-4">14</p>
+                <p class="text-xs uppercase tracking-widest font-medium text-museum-gray">Countries Reached</p>
+            </div>
+            <div class="border-l-2 border-museum-dark pl-6">
+                <p class="text-5xl md:text-7xl font-sans font-bold tracking-tighter mb-4">100%</p>
+                <p class="text-xs uppercase tracking-widest font-medium text-museum-gray">Mission Driven</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brutalist CTA -->
+    <section id="contact" class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-screen-xl mx-auto text-center reveal">
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tighter-xl uppercase mb-12">
+                Initiate <br>Dialogue.
+            </h2>
+            <div class="flex justify-center">
+                <a href="#" class="inline-block border-2 border-museum-dark text-museum-dark px-12 py-6 text-sm uppercase tracking-widest font-bold hover:bg-museum-dark hover:text-white transition-colors">
+                    Contact The Studio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strict Footer -->
+    <footer class="bg-museum-dark text-white pt-24 pb-12 px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="mb-24">
+                <h2 class="text-4xl md:text-7xl lg:text-[10rem] font-sans font-bold tracking-tighter-xl uppercase leading-none text-white/90">
+                    Nieuwe Ruimte
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 border-t border-white/20 pt-12">
+                <div class="md:col-span-1">
+                    <p class="text-sm font-light text-white/60 leading-relaxed mb-8 max-w-xs">
+                        A design and social innovation studio dedicated to systemic change, sustainability, and architectural empowerment.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-medium text-white/40 mb-6">Disciplines</h4>
+                    <ul class="space-y-4 text-sm font-light">
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Civic Technology</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Circular Systems</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Health Equity</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Spatial Justice</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-medium text-white/40 mb-6">Information</h4>
+                    <ul class="space-y-4 text-sm font-light">
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Manifesto</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Archive</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Opportunities</a></li>
+                        <li><a href="#" class="hover:text-white/60 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest font-medium text-white/40 mb-6">Connect</h4>
+                    <div class="flex gap-6 mb-12">
+                        <a href="#" class="text-white hover:text-white/60 text-2xl transition-colors"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="text-white hover:text-white/60 text-2xl transition-colors"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="text-white hover:text-white/60 text-2xl transition-colors"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                    
+                    <form class="flex border-b border-white/40 pb-2" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="bg-transparent w-full text-xs uppercase tracking-widest focus:outline-none text-white placeholder-white/40">
+                        <button type="submit" class="text-xs uppercase tracking-widest font-bold hover:text-white/60 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs uppercase tracking-widest font-medium text-white/40">
+                <p>&copy; 2026 Nieuwe Ruimte.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if(menu.classList.contains('hidden')) {
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
+                } else {
+                    icon.classList.remove('ph-list');
+                    icon.classList.add('ph-x');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.querySelector('i').classList.remove('ph-x');
+                    btn.querySelector('i').classList.add('ph-list');
+                });
+            });
+
+            // Smooth minimalist scroll reveal
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
