@@ -70,11 +70,6 @@
         .tracking-tighter-xl {
             letter-spacing: -0.04em;
         }
-        .green{
-           color:rgb(14, 168, 61);
-           
-    
-        }
     </style>
 </head>
 <body class="bg-museum-bg text-museum-dark font-sans antialiased overflow-x-hidden selection:bg-museum-dark selection:text-white">
@@ -108,32 +103,37 @@
         </div>
     </header>
 
-    <section class="relative pt-40 pb-20 md:pt-56 md:pb-32 px-6 md:px-12 max-w-screen-2xl mx-auto min-h-[95vh] flex flex-col justify-between">
+    <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-6 md:px-12 max-w-screen-2xl mx-auto min-h-[90vh] flex flex-col justify-between">
         <div class="reveal">
-            <p class="text-xs md:text-sm uppercase tracking-widest font-medium mb-8 text-museum-gray">01 &mdash; Design for Social Change</p>
-            <h1 class="text-6xl md:text-8xl lg:text-[9rem] font-sans font-bold tracking-tighter-xl uppercase leading-[0.85] text-museum-dark mb-12">
-                Systemisch<br>
-                <span class="text-museum-gray" >Flexibel</span><br>
-                 Sociaal.
-               
-            </h1>
+            <p class="text-xs md:text-sm uppercase tracking-widest font-medium mb-6 text-museum-gray">01 &mdash; Design for Social Change</p>
+            
+            <!-- Heading and Paragraph placed together for tighter, artful composition -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-8xl lg:text-[8.5rem] font-sans font-bold tracking-tighter-xl uppercase leading-[0.85] text-museum-dark">
+                        Designing<br>
+                        <span class="text-museum-gray">Systems</span><br>
+                        For Good.
+                    </h1>
+                </div>
+                <div class="lg:col-span-4 lg:pb-2">
+                    <p class="text-lg md:text-xl text-museum-dark font-light leading-relaxed border-l border-museum-dark/20 pl-6 lg:pl-8">
+                        We blend rigorous human-centered design with sustainable innovation to dissect complex societal challenges and architect a more equitable future.
+                    </p>
+                </div>
+            </div>
         </div>
         
-        <div class="flex flex-col lg:flex-row justify-between items-end gap-12 mt-12 reveal delay-100">
-            <div class="lg:w-1/3">
-                <p class="text-lg md:text-xl text-museum-dark font-light leading-relaxed">
-                    We blend rigorous human-centered design with sustainable innovation to dissect complex societal challenges and architect a more equitable future.
-                </p>
-            </div>
-            
-            <div class="lg:w-1/2 w-full museum-img-container aspect-[16/9] lg:aspect-[21/9] bg-museum-border">
-                <img src="mitchel-lensink-mHo_LRjAbD4-unsplash.jpg" alt="Community joining hands" class="object-cover w-full h-full">
+        <!-- Full width hero image frame below text block -->
+        <div class="w-full reveal delay-100 mt-4">
+            <div class="museum-img-container aspect-[16/9] lg:aspect-[24/9] bg-museum-border">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Community joining hands" class="object-cover w-full h-full">
             </div>
         </div>
     </section>
 
     <!-- Museum Quote Style -->
-    <section class="border-y border-museum-dark bg-[#0033FF] text-white py-32 px-6 md:px-12">
+    <section class="border-y border-museum-dark bg-[#36960c] text-white py-32 px-6 md:px-12">
         <div class="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 reveal">
             <div class="lg:col-span-3">
                 <p class="text-xs uppercase tracking-widest font-medium text-white/80">Curatorial Statement</p>
